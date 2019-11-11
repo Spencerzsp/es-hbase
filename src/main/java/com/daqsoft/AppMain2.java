@@ -66,7 +66,7 @@ public class AppMain2 {
         SearchResponse searchResponse = client.prepareSearch("zsp")
                 .setTypes("doc")
 //                .setQuery(QueryBuilders.matchAllQuery()).get();
-                .setQuery(QueryBuilders.termQuery("title.keyword", keyWord)).get();
+                .setQuery(QueryBuilders.matchQuery("title.keyword", keyWord)).get();
         SearchHits hits = searchResponse.getHits();
         for(SearchHit hit: hits){
             String s = hit.getSourceAsString();
@@ -209,7 +209,7 @@ public class AppMain2 {
 
         System.out.println("---------------------------------------");
         // 通过关键字对es进行搜索,返回id(id对应hbase中的行键)
-        List<String> keyWords = getByKeyWord(client, "使用POI实现报表打印功能");
+        List<String> keyWords = getByKeyWord(client, "对象");
         System.out.println(keyWords);
         for(String keyWord: keyWords){
             Get get = new Get(Bytes.toBytes(keyWord));

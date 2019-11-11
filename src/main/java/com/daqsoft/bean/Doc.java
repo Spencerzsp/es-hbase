@@ -3,6 +3,7 @@ package com.daqsoft.bean;
 public class Doc {
 
     private Integer id;
+
     private String title;
 
     private String describe;

@@ -30,7 +30,7 @@ public class DocUtil {
                 doc.setTitle(splits[1].trim());
                 doc.setAuthor(splits[2].trim());
                 doc.setDescribe(splits[3].trim());
-                doc.setContent(splits[3].trim());
+                doc.setContent(splits[3].trim() + "--------content");
 
                 docList.add(doc);
             }
