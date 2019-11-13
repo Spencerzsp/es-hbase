@@ -11,7 +11,9 @@ public class DpsDataBean {
     private String status;
     private String sourceId;
     private String involvedWord;
+    private String sourceType;
     private String indexType;
+    private String sourceName;
     private String sensibility;
     private String emotion;
     private String isContent;
@@ -19,20 +21,26 @@ public class DpsDataBean {
     private String title;
     private String releasDate;
     private String content;
-    private String sourceType;
-    private String sourceName;
-    private String sourceUrl;
+    private String sourceAccounts;
+    private String author;
+    private String getDate;
     private String digest;
+    private String schemeVersion;
+    private String schemeId;
+
 
     public DpsDataBean() {
     }
 
-    public DpsDataBean(String id, String status, String sourceId, String involvedWord, String indexType, String sensibility, String emotion, String isContent, String isTitle, String title, String releasDate, String content, String sourceType, String sourceName, String sourceUrl, String digest) {
+    public DpsDataBean(String id, String status, String sourceId, String involvedWord, String sourceType, String indexType, String sourceName, String sensibility, String emotion, String isContent, String isTitle, String title, String releasDate, String content, String sourceAccounts, String author, String getDate, String digest, String schemeVersion, String schemeId) {
+
         this.id = id;
         this.status = status;
         this.sourceId = sourceId;
         this.involvedWord = involvedWord;
+        this.sourceType = sourceType;
         this.indexType = indexType;
+        this.sourceName = sourceName;
         this.sensibility = sensibility;
         this.emotion = emotion;
         this.isContent = isContent;
@@ -40,10 +48,12 @@ public class DpsDataBean {
         this.title = title;
         this.releasDate = releasDate;
         this.content = content;
-        this.sourceType = sourceType;
-        this.sourceName = sourceName;
-        this.sourceUrl = sourceUrl;
+        this.sourceAccounts = sourceAccounts;
+        this.author = author;
+        this.getDate = getDate;
         this.digest = digest;
+        this.schemeVersion = schemeVersion;
+        this.schemeId = schemeId;
     }
 
     @Override
@@ -53,7 +63,9 @@ public class DpsDataBean {
                 ", status='" + status + '\'' +
                 ", sourceId='" + sourceId + '\'' +
                 ", involvedWord='" + involvedWord + '\'' +
+                ", sourceType='" + sourceType + '\'' +
                 ", indexType='" + indexType + '\'' +
+                ", sourceName='" + sourceName + '\'' +
                 ", sensibility='" + sensibility + '\'' +
                 ", emotion='" + emotion + '\'' +
                 ", isContent='" + isContent + '\'' +
@@ -61,11 +73,53 @@ public class DpsDataBean {
                 ", title='" + title + '\'' +
                 ", releasDate='" + releasDate + '\'' +
                 ", content='" + content + '\'' +
-                ", sourceType='" + sourceType + '\'' +
-                ", sourceName='" + sourceName + '\'' +
-                ", sourceUrl='" + sourceUrl + '\'' +
+                ", sourceAccounts='" + sourceAccounts + '\'' +
+                ", author='" + author + '\'' +
+                ", getDate='" + getDate + '\'' +
                 ", digest='" + digest + '\'' +
+                ", schemeVersion='" + schemeVersion + '\'' +
+                ", schemeId='" + schemeId + '\'' +
                 '}';
+    }
+
+    public String getSourceAccounts() {
+        return sourceAccounts;
+    }
+
+    public void setSourceAccounts(String sourceAccounts) {
+        this.sourceAccounts = sourceAccounts;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getGetDate() {
+        return getDate;
+    }
+
+    public void setGetDate(String getDate) {
+        this.getDate = getDate;
+    }
+
+    public String getSchemeVersion() {
+        return schemeVersion;
+    }
+
+    public void setSchemeVersion(String schemeVersion) {
+        this.schemeVersion = schemeVersion;
+    }
+
+    public String getSchemeId() {
+        return schemeId;
+    }
+
+    public void setSchemeId(String schemeId) {
+        this.schemeId = schemeId;
     }
 
     public String getId() {
@@ -178,14 +232,6 @@ public class DpsDataBean {
 
     public void setSourceName(String sourceName) {
         this.sourceName = sourceName;
-    }
-
-    public String getSourceUrl() {
-        return sourceUrl;
-    }
-
-    public void setSourceUrl(String sourceUrl) {
-        this.sourceUrl = sourceUrl;
     }
 
     public String getDigest() {
